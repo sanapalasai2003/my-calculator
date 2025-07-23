@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #3a4750;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 320px; /* Adjust width as needed */
+}
+
+#display {
+    width: calc(100% - 20px); /* Account for padding */
+    height: 60px;
+    background-color: #eceff1;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 2.5em;
+    color: #333;
+    padding: 0 10px;
+    box-sizing: border-box; /* Include padding in the width */
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Keep text on one line */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.button {
+    background-color: #5d6d7e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 20px 0;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #7b8d9a;
+}
+
+.button:active {
+    background-color: #4a545d;
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.operator {
+    background-color: #f7a523; /* Orange for operators */
+}
+
+.operator:hover {
+    background-color: #ffb84d;
+}
+
+.operator:active {
+    background-color: #d18d1f;
+}
+
+.clear {
+    background-color: #e74c3c; /* Red for clear */
+}
+
+.clear:hover {
+    background-color: #f56e5f;
+}
+
+.clear:active {
+    background-color: #c0392b;
+}
+
+.equals {
+    background-color: #2ecc71; /* Green for equals */
+    grid-column: span 2; /* Make equals button span two columns */
+}
+
+.equals:hover {
+    background-color: #58d68d;
+}
+
+.equals:active {
+    background-color: #27ae60;
+}
+
+.zero {
+    grid-column: span 2; /* Make zero button span two columns */
+}
